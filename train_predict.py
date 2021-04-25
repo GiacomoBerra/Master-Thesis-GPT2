@@ -299,7 +299,6 @@ class DataProcessing():
 		print(f'n_dep: {n_dep}')
 		print(f'n_non_dep: {n_non_dep}')
 
-
 		# join the two lists
 		complete_dataset = dataset['depressed'][:n_dep] + dataset['non depressed'][:n_non_dep]
 		
@@ -417,6 +416,7 @@ class DataProcessing():
 		model.train()
 
 		#batch = tuple(input_tensor.to(self.device) for input_tensor in batch)
+		print(len(batch))
 		input_ids, labels, token_type_ids, attention_mask = batch
 
 		input_ids = input_ids.to(self.device)
@@ -556,6 +556,7 @@ if __name__ == "__main__":
 	parser.add_argument("--n_epochs", type=int, default=2, help="Number of training epochs.")
 	parser.add_argument("--lr", type=int, default=6.25e-5, help="Learning rate.")
 	parser.add_argument("--perc_training", type=int, default=0.8, help="Percentage of the whole data to use for training.")
+	parser.add_argument("--depressed_perc", type=float, default=0.5, help="Balance between control and positive subjects, e.g. 0.5 means half control and half positive")
 	args = parser.parse_args()
 
 	print(args)
