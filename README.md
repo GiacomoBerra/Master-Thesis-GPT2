@@ -6,4 +6,8 @@ To install and use the training and inference scripts please install the require
 pip install -r requirements.txt
 ```
 
-## Running the code
+## Fine-tuning the model
+The training script can be used in single GPU or on the CPU (not recommended, too slow)
+```bash
+python train.py 
+```
