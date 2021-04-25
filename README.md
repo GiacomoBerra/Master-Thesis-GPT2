@@ -24,8 +24,8 @@ max_len | `int` | `50` | Maximum length of the sentences (excluding the special 
 create_DataLoaders | `str` | `False` | If set to True it creates new DataLoaders
 load_json | `str` | `True` | If set to true, it loads the prercomputed json vih the data
 gradient_accumulation_steps | `int` | `40` |  Accumulate gradients on several steps during the training to overcome the small match size due to small GPU memory
-batch_size | `int` | `2` | Batch size for validation
-n_epochs | `int` | `8` | Number of training epochs
+batch_size | `int` | `50` | Batch size for validation
+n_epochs | `int` | `2` | Number of training epochs
 lr | `float` | `6.25e-5` | Learning rate
 perc_training | `float` | `0.8` | Percentage of the whole data to use for training
 depressed_perc | `float` | `0.5` | Balance between control and positive subjects, e.g. 0.5 means half control and half positive
