@@ -22,8 +22,8 @@ train | `str` | `'True'` | True: train the model. False: predict
 job_id | `int` | `0` | Job ID of, used when running the code on cluster
 max_len | `int` | `50` | Maximum length of the sentences (excluding the special tokens)
 create_DataLoaders | `str` | `False` | If set to True it creates new DataLoaders
-load_json | `str` | `True` | If set to true, it loads the prercomputed json
-gradient_accumulation_steps | `int` | `40` |  Accumulate gradients on several steps
+load_json | `str` | `True` | If set to true, it loads the prercomputed json vih the data
+gradient_accumulation_steps | `int` | `40` |  Accumulate gradients on several steps during the training to overcome the small match size due to small GPU memory
 batch_size | `int` | `2` | Batch size for validation
 n_epochs | `int` | `8` | Number of training epochs
 lr | `float` | `6.25e-5` | Learning rate
